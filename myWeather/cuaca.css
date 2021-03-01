@@ -1,0 +1,177 @@
+body{
+    background:linear-gradient(to bottom, #00aaaa ,#00aa);
+    background-size: 100% 1000px;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    height: 100%;
+}
+
+.tombol-kembali {
+    z-index:100;
+    margin-top:10vh;
+    position:fixed;
+}
+.navbar-brand h1{
+    font-size:30px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Carter One', cursive;
+    text-shadow: 0px 0px 2px black;
+}
+
+#masukan {
+    width: 200px;
+    height: 35px;
+    background-color:rgba(247, 243, 243, 1);
+    border-radius:5px; 
+    border: none;
+}
+#tombol{
+    background-color:rgba(247, 243, 243, 0.7);
+    color:black;
+}
+#tombol:hover{
+    background-color:transparent;
+}
+
+.content{
+    color: #fff;
+    font-family: 'Carter One', cursive;
+    margin:50px auto;
+}
+
+.ikon-cuaca {
+    margin: 50px auto;
+}
+
+.ikon-cuaca p {
+    text-shadow:0px 0px 1px  black;
+    font-size:2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    z-index:6;
+}
+
+.urutan{
+    background-color:rgba(247, 243, 243, 0.5);
+    text-align:center;
+}
+
+.ikon-cuaca img{
+    margin-left: 20vw;
+    z-index: -5;
+    width:200px;
+    height:200px;
+}
+
+.lokasi {
+    text-align: center;
+}
+
+/* animasi */
+.urutan:hover {
+    transition: all .2s;
+    font-size: 20px;
+    letter-spacing:4px;
+}
+/* tampilan tablet */
+@media (min-width: 768px) {  
+body{
+    background-size:100% 1000px;
+}
+.navbar-brand h1{
+    font-size:30px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Carter One', cursive;
+    text-shadow: 0px 0px 2px black;
+}
+    
+#masukan {
+    width: 200px;
+    height: 35px;
+    background-color:rgba(247, 243, 243, 1);
+    border-radius:5px; 
+    border: none;
+}
+    
+.content{
+    margin:-100px auto;
+}
+
+.lokasi {
+    margin-left: 17%;
+    margin-bottom: 10%;
+    color: white;
+    font-family: 'Carter One', cursive;
+}
+
+.ikon-cuaca {
+    margin: 100px auto;
+}
+
+.ikon-cuaca p {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow:0px 0px 1px  black;
+    font-size:2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    z-index:6;
+}
+
+.bawah{
+    margin-top:1px;
+    height:20vh;
+    padding-top:5px;
+}
+  
+
+.ikon-cuaca img{
+    width:200px;
+    height:200px;
+}
+}
+
+/* tamppilan pc */
+@media (min-width: 1200px) { 
+ body{
+    background-size: cover;
+
+    }
+    .navbar-brand h1{
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+        font-family: 'Carter One', cursive;
+        text-shadow: 0px 0px 2px black;
+    }
+    
+    #masukan {
+        width: 200px;
+        height: 35px;
+        background-color:rgba(247, 243, 243, 0.7);
+        border-radius:5px; 
+        border: none;
+    }
+    
+    .content{
+        margin:-100px auto;
+    }
+    
+    .ikon-cuaca p {
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow:0px 0px 1px  black;
+        font-size:2.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin:-100px 55%;
+        position: absolute;
+        z-index:6;
+    }
+    .ikon-cuaca img{
+        margin: 15vh 40% 0px 40%;
+        width:200px;
+        height:200px;
+    }
+ }

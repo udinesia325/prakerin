@@ -1,0 +1,111 @@
+
+body {
+    background-color: #060c21;
+}
+
+
+.mantap {
+    font-family: 'Paytone One', sans-serif;
+	color:#bbb;
+	transition:.2s;
+}
+.tombol-kembali {
+    z-index:10;
+    margin-top:5vh;
+}
+.mantap:hover{
+ letter-spacing:3px;
+}
+
+
+.masukan, .tutup, .pencari {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    box-shadow: 0 15px 25px rgba(20,20,20,.5);
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .8);
+	transition:.2s;
+}
+
+.inputan *:hover{
+	transform:scale(1.1);
+
+}
+
+.tutup {
+    color: white;
+}
+
+.pencari:hover, .tutup:hover {
+    background-color: #060c21;
+}
+
+.faris
+{
+	color: white;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #060c21;
+}
+
+
+.faris:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background-color: #060c21;
+	z-index: -1;
+}
+
+.faris:after
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background-color: #060c21;
+	z-index: -2;
+	filter: blur(40px);
+}
+
+.faris:before,
+.faris:after
+{
+	background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+}
+
+.content
+{
+	padding: 20px;
+	box-sizing: border-box;
+	color: black;
+}
+
+.faris:hover{
+	transition:.25s;
+	transform: scale(1.1);
+	box-shadow: 0px 3px 2px grey;
+}
+
+
+.modal  *{
+	background-color:#060c21;
+color:white;
+
+}
+
+@media(max-width:568px){
+
+	.modal-body .list-group {
+	font-size: 12px;
+}
+}

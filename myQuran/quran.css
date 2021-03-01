@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('../library/Sketsaramadhan-nRLAO.otf');
+body {
+  background-color: #f1f1ff;
+}
+
+
+.nama-qori {
+    text-align: center;
+    font-family:'Sketsa Ramadhan';
+    color: #000000;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 3px;
+    box-shadow: #000;
+    transition: 0.2s;
+}
+.gambarqori .sudais {
+    width:100%;
+    height:200px;
+    background-image:url('../assests/sudais1.jfif');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    transition: 0.2s;
+}
+.gambarqori .ghamidi {
+    width:100%;
+    height:200px;
+    background-image:url('../assests/ghamidi.jfif');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    transition: 0.2s;
+}
+.gambarqori .mishary {
+    width:100%;
+    height:200px;
+    background-image:url('../assests/mishary.jfif');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    transition: 0.2s;
+}
+
+.gambarqori .sudais:hover, .nama-qori:hover {
+    transform: scale(1.1);
+}
+
+.gambarqori .ghamidi:hover {
+    transform: scale(1.1);
+}
+
+.gambarqori .mishary:hover {
+    transform: scale(1.1);
+}
+.kotak {
+    width:90%;
+    height:500px;
+    overflow-y:auto;
+}
+.keterangan {
+    font-family: 'Amiri', serif;
+    background:rgba(255, 255, 255, .5);
+
+}
+/* mode gelap */
+
+
+
+
+
+/* sampe sini */
+/* modal gambar */
+
+/* Rounded sliders */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+
+.modal-body .gambar {
+    width: 100%;
+    height:1000px;
+    background-image:url(../assests/alquran.jpg);
+    background-size:100% 700px;
+    background-repeat: no-repeat;
+}
+
+/* width */
+.kotak::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* ini scrollll */
+  /* Track */
+.kotak::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .5);
+    opacity: 0.5;
+  }
+   
+  /* Handle */
+.kotak::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 6px;
+}
+  /* Handle on hover */
+.kotak::-webkit-scrollbar-thumb:hover {
+    background: grey;
+    box-shadow: black;
+}
+
+/* width */
+.kotak::-moz-scrollbar {
+    width: 10px;
+  }
+  /* ini scrollll */
+  /* Track */
+.kotak::-moz-scrollbar-track {
+    background: rgba(255, 255, 255, .5);
+    opacity: 0.5;
+  }
+   
+  /* Handle */
+.kotak::-moz-scrollbar-thumb {
+    background: grey;
+    border-radius: 6px;
+}
+  /* Handle on hover */
+.kotak::-moz-scrollbar-thumb:hover {
+    background: grey;
+    box-shadow: black;
+}
+
+/* width */
+.kotak::-o-scrollbar {
+    width: 10px;
+  }
+  /* ini scrollll */
+  /* Track */
+.kotak::-o-scrollbar-track {
+    background: white;
+    opacity: 0.5;
+  }
+   
+  /* Handle */
+.kotak::-o-scrollbar-thumb {
+    background: linear-gradient(red, green, blue);
+    border-radius: 6px;
+}
+  /* Handle on hover */
+.kotak::-o-scrollbar-thumb:hover {
+    background: linear-gradient(blue, green,red);
+    box-shadow: black;
+}
+
+.download {
+  background-color: #201E2B;
+  color: white;
+}
+
+.malam{
+        background-color:#201E2B;
+        color:white;
+        background-size: cover;
+}
+.malam .nama-qori{
+    color:#fff;
+    text-shadow:0px 0px 5px black;   
+} 
+
+.malam .download {
+  background-color: rgba(255, 255, 255, .5);
+  color: #201E2B;
+  font-weight: bold;
+}
+
+.malam .ket-text {
+    color:#fff;
+}
+.malam .keterangan {
+    border-radius:13px;
+    border: 1px dotted white;
+    background-color: transparent;
+    color:#fff;
+}
+/* harus pakek malam */
+/* .malam  */
+
+.malam .kotak::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+
+@media (max-width:576px){
+  * {
+    display: none;
+  }
+}
+@media (min-width:768px){
+
+}

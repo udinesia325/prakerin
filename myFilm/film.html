@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../assests/cinema.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="film.css">
+    <title>Document</title>
+</head>
+<body>
+<div>
+ <h1 class="text-center mantap">MY - FILM</h1>
+  <div class="container ">  
+    <div class="row mx-auto">
+      <div class="col col-sm-8 col-lg-12">
+        <div class="input-group inputan">
+          <input type="text" class="form-control masukan" placeholder="telusuri...">
+          <div class="input-group-append">
+            <button class="btn btn-white btn-outline-none tutup">&times;</button>
+            <button class="btn btn-primary pencari" type="button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg></i></button>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <div class="row isi-film mx-auto my-5"></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="info" tabindex="-1" aria-labelledby="infolabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="info">informasi..</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="info">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+   
+   
+   
+   
+   
+   
+   
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script src="../bootstrap/js/popper.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../library/sweetalert.js"></script>
+    <script src="film.js"></script>
+  </body>
+</html>
