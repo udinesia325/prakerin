@@ -68,7 +68,7 @@ function semuaproses(){
        $(".isi-film").html(kartu);
       $(".info").click(function(){
           let id = $(this).data("id");
-        fetch("http://www.omdbapi.com/?apikey=b053a650&i="+id)
+        fetch("https://www.omdbapi.com/?apikey=b053a650&i="+id)
         .then(response => response.json())
         .then(r=>{
           $(".modal-body").html(`<div class="row">
