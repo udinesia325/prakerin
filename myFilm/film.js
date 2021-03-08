@@ -35,7 +35,7 @@ function semuaproses(){
   $('.isi-film').html(` <div class="spinner-grow spinner-grow-sm text-primary d-flex justify-content-center mx-auto my-5" style="width: 3rem; height: 3rem;" role="status">
 </div>`)
   var masukan =document.querySelector(".masukan").value;
-  fetch("http://www.omdbapi.com/?apikey=b053a650&s="+masukan)
+  fetch("https://www.omdbapi.com/?apikey=b053a650&s="+masukan)
   .then(response => response.json())
   .then(hasil => {
     if (hasil.Response === 'False') {
@@ -68,7 +68,7 @@ function semuaproses(){
        $(".isi-film").html(kartu);
       $(".info").click(function(){
           let id = $(this).data("id");
-        fetch("http://www.omdbapi.com/?apikey=b053a650&i="+id)
+        fetch("https://www.omdbapi.com/?apikey=b053a650&i="+id)
         .then(response => response.json())
         .then(r=>{
           $(".modal-body").html(`<div class="row">
