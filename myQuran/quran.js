@@ -1,6 +1,8 @@
 
 $('#pencari').keypress(function (e) { 
-    $('.tombol').click();
+    if (e.keyCode == 13) {
+            $('.tombol').click();
+    }
 });
 
 $('.tombol').click(function () { 
