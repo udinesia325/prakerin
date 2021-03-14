@@ -116,6 +116,7 @@ fetch('https://covid19.mathdro.id/api')
 })
 
 // data covid global
+
 fetch('https://api.kawalcorona.com/')
 .then(awm => awm.json())
 .then(ak47 => {

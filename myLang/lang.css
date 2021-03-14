@@ -1,0 +1,13 @@
+#kata,#terjemahan {
+    font-size:30px;
+}
+textarea{
+    width:80%;
+}
+.pilih-bahasa .list-group-item{
+    overflow-x: auto;
+    transition: all .5s;
+}
+.pilih-bahasa .list-group-item .bahasa:focus{
+    border-bottom: 2px solid white;
+}
