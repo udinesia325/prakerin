@@ -1,13 +1,24 @@
-#kata,#terjemahan {
-    font-size:30px;
+#kata,
+#terjemahan {
+  font-size: 30px;
 }
-textarea{
-    width:80%;
+textarea {
+  width: 80%;
+  resize: none;
 }
-.pilih-bahasa .list-group-item{
-    overflow-x: auto;
-    transition: all .5s;
+.pilih-bahasa .list-group-item {
+  overflow-x: scroll;
+  transition: all 0.5s;
 }
-.pilih-bahasa .list-group-item .bahasa:focus{
+.pilih-bahasa .list-group-item .bahasa:focus {
+  border-bottom: 2px solid white;
+}
+.kotak {
+  width: 1000px;
+}
+.garis-bawah {
+    border-bottom: 2px solid white;
+}
+.garis-bawah-indo {
     border-bottom: 2px solid white;
 }
