@@ -1,4 +1,6 @@
-  $('.bahasa').eq(0).toggleClass('garis-bawah');
+ 'use strict'
+ $('.banner').fadeOut(2000);
+ $('.bahasa').eq(0).toggleClass('garis-bawah');
   //ambil tiap tombol 
 $('.bahasa').click(function (e) { 
     $('.bahasa').eq(0).removeClass('garis-bawah');
@@ -34,7 +36,10 @@ function proses(k='id'){
    //   console.log(kata);
 //jalanin closure ke parent function
             let url = `https://api-translate.azharimm.tk/translate?engine=google&text=${kata}&to=${k}`;
-         fetch(url).then(r => r.json()).then(r => terjemah(r))
+         fetch(url).then(r => r.json()).then(r => {
+             terjemah(r)
+            
+            })
 
 
     });

@@ -1,70 +1,143 @@
-
-<!doctype html>
-<html lang="en" >
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css" />
     <script src="../library/fontawesome/js/all.min.js"></script>
-    <link rel="shortcut icon" href="../assests/quran.png" type="image/x-icon">
-    <link rel="stylesheet" href="lang.css">
+    <link rel="shortcut icon" href="../assests/translate.png" type="image/x-icon" />
+    <link rel="stylesheet" href="lang.css" />
     <title>MY - LANG</title>
-</head>
-<body >
-    <div class="alert alert-success fixed-top text-dark  d-none" role="alert" style="width:30%">
-        Teks Tersalin !
+  </head>
+  <body>
+    <div class="banner">
+      <h1 class="text-dark mt-4 mb-5">My - Lang</h1>
+      <span >Terjemahkan Bahasa Disini</span><br />
+      <img class="my-5" src="../assests/translate.png" alt="gambar translate" />
+      <p>Memuat ...</p>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
       </div>
-        <div class="row mb-5 text-center">
-            <div class="col col-12">
-                <h1 class="text-dark">My - Lang</h1>
-            </div>
-        </div>
 
+    </div>
+    <div
+      class="alert alert-success fixed-top text-dark d-none"
+      role="alert"
+      style="width: 30%"
+    >
+      Teks Tersalin !
+    </div>
+    <div class="row mb-5 text-center">
+      <div class="col col-12">
+        <h1 class="text-dark">My - Lang</h1>
+      </div>
+    </div>
 
-        <div class="row mt-5">
-            <div class="col col-9 col-sm-9 col-md-6 col-lg-6 mx-auto text-center">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active py-4">
-                      Deteksi Bahasa
-                    </a>
-                     <div class="card">
-                    <div class="card-body">
-                        <textarea  id="kata" rows="5" autofocus></textarea>
-                    </div>
-                  </div>
-                    </div>
-               
+    <div class="row mt-5" class="container">
+      <div class="col col-9 col-sm-9 col-md-6 col-lg-6 mx-auto text-center">
+        <div class="list-group">
+          <a
+            href="#"
+            class="list-group-item list-group-item-action active py-4"
+          >
+            Deteksi Bahasa
+          </a>
+          <div class="card">
+            <div class="card-body">
+              <textarea id="kata" rows="5" autofocus></textarea>
             </div>
-            <div class="col col-9 col-sm-9 col-md-6 col-lg-6 mx-auto">
-                <div class="list-group pilih-bahasa">
-                    <div class="list-group-item list-group-item-action active">
-                        <div class="kotak">
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="id">Indonesia</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="en">Inggris</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="zh-TW">China</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="ar">Arab</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="jp">Jepang</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="ko">Korea</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="la">Latin</button>
-                          <button class="bahasa btn btn-transparent text-white m-2" data-kode="ru">Rusia</button>
-                          <!-- kalo mau nambahin bahasa tinggal coopi paste button ini -->
-                        </div>                   
-                    </div>
-                     <div class="card">
-                        <div class="card-body">
-                            <textarea  id="terjemahan" cols="30" rows="5" placeholder="Terjemahan"></textarea>
-                            <button id="kopi" class="btn btn-transparent"><i class="far fa-2x fa-copy text-secondary"></i></button>
-                        </div>
-                  </div>
-                    </div>
-               
-            </div>
-        
+          </div>
         </div>
-     
-        
+      </div>
+      <div class="col col-9 col-sm-9 col-md-6 col-lg-6 mx-auto">
+        <div class="list-group pilih-bahasa">
+          <div class="list-group-item list-group-item-action active">
+            <div class="kotak">
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="id"
+              >
+                Indonesia
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="en"
+              >
+                Inggris
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="zh-TW"
+              >
+                China
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="ar"
+              >
+                Arab
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="jp"
+              >
+                Jepang
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="ko"
+              >
+                Korea
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="la"
+              >
+                Latin
+              </button>
+              <button
+                class="bahasa btn btn-transparent text-white m-2"
+                data-kode="ru"
+              >
+                Rusia
+              </button>
+              <button
+              class="bahasa btn btn-transparent text-white m-2"
+              data-kode="th"
+            >
+              Thailand
+            </button>
+            <button
+            class="bahasa btn btn-transparent text-white m-2"
+            data-kode="vi"
+          >
+            Vietnam
+          </button>
+              <!-- kalo mau nambahin bahasa tinggal coopi paste button ini -->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <textarea
+                id="terjemahan"
+                cols="30"
+                rows="5"
+                placeholder="Terjemahan"
+              ></textarea>
+              <button id="kopi" class="btn btn-transparent">
+                <i class="far fa-2x fa-copy text-secondary"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../bootstrap/js/jquery.js"></script>
     <script src="../bootstrap/js/popper.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>

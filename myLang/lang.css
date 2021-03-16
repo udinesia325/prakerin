@@ -1,10 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+*{
+    font-family: 'Source Serif Pro', serif;
+}
+/* width */
+div::-webkit-scrollbar {
+  width: 10px;
+  height:5px;
+}
+
+/* Track */
+div::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+div::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+div::-webkit-scrollbar-thumb:hover {
+  background: #ddd; 
+}
+/* width */
+textarea::-webkit-scrollbar {
+  width: 10px;
+  height:5px;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+  background: #ddd; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #aaa; 
+}
 #kata,
 #terjemahan {
   font-size: 30px;
 }
+.banner{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 20000;
+  text-align: center;
+  background:white;
+  font-weight: bold;
+}
+.banner img{
+  min-width: 200px;
+  min-height: 200px;
+  width: 20vw;
+  height:15vh;
+}
 textarea {
   width: 80%;
   resize: none;
+  outline: none;
+  border-bottom: 3px solid #ccc;
+  border-left:none;
+  border-right:none;
+  border-top:none;
 }
 .pilih-bahasa .list-group-item {
   overflow-x: scroll;
