@@ -74,7 +74,7 @@ $('.banner').html(`<img src="../assests/dilan2.png" class="bg">
 
 function rekomendasi() {
     const urlfilm = 'http://api-lk21.herokuapp.com/country?country=indonesia';
-fetch(urlfilm).then(h => h.json()).then(h => proses(h))
+fetch(urlfilm).then(h => h.json()).then(h => proses(h)).catch(gagal())   //fungsi gagal ada di request.js
 
     function proses(hasil){
         let kartu = '';
