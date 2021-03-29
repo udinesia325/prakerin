@@ -5,7 +5,7 @@ $('#masukan').keypress(function (e) {
   }
 });
 $('#tombol').click(function () { 
-$(".content").html(`<div class="spinner-border text-primary mx-auto my-5 loading" role="status">
+$(".content").html(`<div class="spinner-border text-light" role="status">
 <span class="sr-only">Loading...</span>
 </div>
 `)
