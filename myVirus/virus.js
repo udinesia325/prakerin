@@ -131,7 +131,7 @@ fetch('https://api.kawalcorona.com/')
         <td class='alert-secondary'>${no}</td>
         <td class=''>${negara}</td>
         <td class='oren'>${positif}</td>
-        <td class='hijo'>${sembuh}</td>
+        <td class='hijo'>${sembuh ?? 'Privasi'}</td>
         <td class='abang'>${mati}</td>
       </tr>`;
       no++
