@@ -20,7 +20,7 @@ $('#masukan').keypress(function (e) {
 function lakukan(l) {
     
 const url = `http:api-lk21.herokuapp.com/search?query=${l}`;
-fetch(url).then(hasil => hasil.json()).finally(()=>lambangloading()).then(r =>{proses(r)} ).catch((e)=>{gagal()});
+fetch(url).then(hasil => hasil.json()).finally(()=>lambangloading()).then(r =>proses(r) ).catch((e)=>gagal());
 function proses(hasil){
     if (hasil.result[0] ==undefined) {
         throw new Error
@@ -66,16 +66,16 @@ function lambangloading() {
     $('#tombol').removeClass('jarak-loading');
     $('#tombol').addClass('fa fa-search')
 }
-function gagal() {
-    let kartu = `	<h3 class="text-center text-white my-5">Tidak ada hasil ...</h3>
-                <p class="text-center text-white">Server sedang dalam maintenance</p>
-    `
-    $('#tombol').html('');
-    $('#tombol').removeClass('jarak-loading');
-    $('#tombol').addClass('fa fa-search')
-    $('.hasil').show();
-    $('.hasil').html(kartu);
-    $('.hasil').nextUntil($('.gajelas')).hide();
-    window.scrollTo(0,500)
+// function gagal() {
+//     let kartu = `	<h3 class="text-center text-white my-5">Tidak ada hasil ...</h3>
+//                 <p class="text-center text-white">Server sedang dalam maintenance</p>
+//     `
+//     $('#tombol').html('');
+//     $('#tombol').removeClass('jarak-loading');
+//     $('#tombol').addClass('fa fa-search')
+//     $('.hasil').show();
+//     $('.hasil').html(kartu);
+//     $('.hasil').nextUntil($('.gajelas')).hide();
+//     window.scrollTo(0,500)
 
-}
+// }
