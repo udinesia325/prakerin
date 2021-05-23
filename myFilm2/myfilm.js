@@ -1,6 +1,4 @@
 'use strict';
-
-
 $('.logo').click(()=>document.location.href = 'myfilm2.html')
 $(document).ready( function () {
    rekomendasi()
@@ -23,9 +21,6 @@ setInterval(()=>{
     }
   
 },20000)
-
-
-
 
 function yowisben() {
   $('.banner').html(`<img src="../assests/yowisben1.png" class="bg">
@@ -74,144 +69,55 @@ $('.banner').html(`<img src="../assests/dilan2.png" class="bg">
 
 function rekomendasi() {
     const urlfilm = 'http://api-lk21.herokuapp.com/country?country=indonesia';
-fetch(urlfilm).then(h => h.json()).then(h => prosess(h)).catch(gagal())   //fungsi gagal ada di request.js
-// let prosess = a => console.log(a)
-    function prosess(hasil){
-        console.log(hasil)
-        let kartu = '';
-        hasil.result.forEach((h,i) =>{
-            let judul = h.title.split('');
-            let batasKata = judul.splice(20,30,'...');
-            let gambar = h.thumbnail;
-            let genre = h.genre;
-            let rating = h.rating;
-            let durasi = h.duration;
-            let kualitas = h.quality;
-            let film = h.watch;
-            let cuplikan = h.trailer;
-            if(cuplikan != undefined){
-                let pecah =cuplikan.split('watch?v=');
-                let selip = pecah.splice(1,0,'embed/');
-                kartu +=`<div class="card bg-transparent text-center">
-                    <img src="${gambar}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <small class="text-white">${judul.join('')}</small><br>
-                    <button class="btn btn-primary btn-sm  mt-1 lihat" data-cuplikan="${pecah.join('')}" data-film="${film}" data-genre="${genre.join(' / ')}" data-kualitas="${kualitas}" data-durasi="${durasi}"  data-rating="${rating}">Lihat</button>
-                    </div>
-                </div>`
-            
-            }
-            
-        
-        }) 
-        $('.rekomendasi').html(kartu);
-
-
-
-    }
-
+    fetch(urlfilm).then(h => h.json()).then(h => render('.rekomendasi',h)).catch((e)=>gagal())
 
 }
         
-
-
-
-
-
-
-
 function segera() {
     const urlfilm = 'http://api-lk21.herokuapp.com/comingsoon';
-fetch(urlfilm).then(h => h.json()).then(h => proses(h))
-
-    function proses(hasil){
-        let kartu = '';
-        hasil.result.forEach((h,i) =>{
-            let judul = h.title.split('');
-            let batasKata = judul.splice(20,30,'...');           
-            let gambar = h.thumbnail;
-            let genre = h.genre;
-            let rating = h.rating;
-            let durasi = h.duration;
-            let kualitas = h.quality;
-            let film = h.watch;
-            let cuplikan = h.trailer;
-            if(cuplikan != undefined){
-                let pecah =cuplikan.split('watch?v=');
-                let selip = pecah.splice(1,0,'embed/');
-                kartu +=`<div class="card bg-transparent text-center">
-                    <img src="${gambar}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <small class="text-white">${judul.join('')}</small><br>
-                    <button class="btn btn-primary btn-sm  mt-1 lihat" data-cuplikan="${pecah.join('')}" data-film="${film}" data-genre="${genre.join(' / ')}" data-kualitas="${kualitas}" data-durasi="${durasi}"  data-rating="${rating}">Lihat</button>
-                    </div>
-                </div>`
-            
-            }
-            
-        
-        }) 
-        $('.segera').html(kartu);
-
-
-
-    }
-
+    fetch(urlfilm).then(h => h.json()).then(h => render('.segera',h)).catch((e)=>gagal())
 
 }
         
 
 function terbaru() {
     const urlfilm = 'http://api-lk21.herokuapp.com/newupload';
-fetch(urlfilm).then(h => h.json()).then(h => proses(h))
-
-    function proses(hasil){
-        let kartu = '';
-        hasil.result.forEach((h,i) =>{
-            let judul = h.title.split('');
-            let batasKata = judul.splice(20,30,'...');
-            let gambar = h.thumbnail;
-            let genre = h.genre;
-            let rating = h.rating;
-            let durasi = h.duration;
-            let kualitas = h.quality;
-            let film = h.watch;
-            let cuplikan = h.trailer;
-            if(cuplikan != undefined){
-                let pecah =cuplikan.split('watch?v=');
-                let selip = pecah.splice(1,0,'embed/');
-                kartu +=`<div class="card bg-transparent text-center">
-                    <img src="${gambar}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <small class="text-white">${judul.join('')}</small><br>
-                    <button class="btn btn-primary btn-sm  mt-1 lihat" data-cuplikan="${pecah.join('')}" data-film="${film}" data-genre="${genre.join(' / ')}" data-kualitas="${kualitas}" data-durasi="${durasi}"  data-rating="${rating}">Lihat</button>
-                    </div>
-                </div>`
-            
-            }
-            
-        
-        }) 
-        $('.terbaru').html(kartu);
-
-
-
-    }
-
+    fetch(urlfilm).then(h => h.json()).then(h => render('.terbaru',h)).catch((e)=>gagal())
 
 }
         
 
-
-
-
-
-
-
-
-
-
-
+//menampilkan ke html
+const render = (posisi,data)=>{
+    
+    let kartu = '';
+    data.result.forEach((h,i) =>{
+        let judul = h.title.split('');
+        let batasKata = judul.splice(20,30,'...');
+        let gambar = h.thumbnail;
+        let genre = h.genre;
+        let rating = h.rating;
+        let durasi = h.duration;
+        let kualitas = h.quality;
+        let film = h.watch;
+        let cuplikan = h.trailer;
+        if(cuplikan != undefined){
+            let pecah =cuplikan.split('watch?v=');
+            let selip = pecah.splice(1,0,'embed/');
+            kartu +=`<div class="card bg-transparent text-center">
+                <img src="${gambar}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <small class="text-white">${judul.join('')}</small><br>
+                <button class="btn btn-primary btn-sm  mt-1 lihat" data-cuplikan="${pecah.join('')}" data-film="${film}" data-genre="${genre.join(' / ')}" data-kualitas="${kualitas}" data-durasi="${durasi}"  data-rating="${rating}">Lihat</button>
+                </div>
+            </div>`
+        
+        }
+        
+    
+    }) 
+    $(posisi).html(kartu);
+}
 //event binding
 $(document).click( function (e) { 
     if (e.target.classList.contains('lihat')) {
@@ -231,3 +137,81 @@ $(document).click( function (e) {
         })
     }    
     });
+    
+$('.hasil').hide();
+$('#tombol').click(function () { 
+    const load = `<div class="spinner-border spinner-border-sm text-white" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>`
+  //tambahin loading ketika di klik
+      $(this).html(load);
+    $(this).removeClass('fa fa-search');
+    $(this).addClass('jarak-loading')
+    let masukan = $(this).prev().val();
+    lakukan(masukan);
+
+});
+$('#masukan').keypress(function (e) { 
+    if(e.keyCode==13){
+        $('#masukan').next().click()
+    }
+});
+
+function lakukan(l) {
+    
+const url = `http:api-lk21.herokuapp.com/search?query=${l}`;
+fetch(url).then(hasil => hasil.json()).finally(()=>lambangloading()).then(r =>proses(r) );
+function proses(hasil){
+    if (hasil.result.length === 0) {
+        gagal()
+        return;
+    }
+    let kartu = '';
+    hasil.result.forEach((h,i) =>{
+        let judul = h.title.split('');
+        let batasKata = judul.splice(20,30,'...');
+        let gambar = h.thumbnail;
+        let genre = h.genre;
+        let rating = h.rating;
+        let durasi = h.duration;
+        let kualitas = h.quality;
+        let film = h.watch;
+        let cuplikan = h.trailer;
+        if(cuplikan != undefined){
+            let pecah =cuplikan.split('watch?v=');
+            let selip = pecah.splice(1,0,'embed/');
+            kartu +=`<div class="card bg-transparent text-center">
+                <img src="${gambar}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <small class="text-white">${judul.join('')}</small><br>
+                <button class="btn btn-primary btn-sm  mt-1 lihat" data-cuplikan="${pecah.join('')}" data-film="${film}" data-genre="${genre.join(' / ')}" data-kualitas="${kualitas}" data-durasi="${durasi}"  data-rating="${rating}">Lihat</button>
+                </div>
+            </div>`
+        
+        }
+        
+    
+    }) 
+    $('.hasil').show();
+    $('.hasil').html(kartu);
+    $('.hasil').nextUntil($('.gajelas')).hide();
+    window.scrollTo(0,500)
+
+
+}
+
+}
+
+function lambangloading() {
+    $('#tombol').html('');
+    $('#tombol').removeClass('jarak-loading');
+    $('#tombol').addClass('fa fa-search')
+}
+function gagal() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Film Yang anda cari tidak dapat di temukan',
+      })
+
+}
